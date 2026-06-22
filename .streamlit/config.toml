@@ -1,0 +1,72 @@
+# SpaceIntel AI - Streamlit Configuration
+# This file configures the Streamlit app appearance and behavior
+
+[theme]
+# Primary color for interactive elements (Space Blue)
+primaryColor = "#00bfff"
+
+# Background color (Dark Space Theme)
+backgroundColor = "#0e1117"
+
+# Secondary background color for cards and containers
+secondaryBackgroundColor = "#1a1c23"
+
+# Text color (White for readability)
+textColor = "#ffffff"
+
+# Font family
+font = "sans serif"
+
+[server]
+# Server settings
+# headless = true  # Set to true for production/Docker deployments
+headless = false  # Set to false for local development (opens browser automatically)
+port = 8501
+
+# Server address - IMPORTANT for local vs production
+# For LOCAL DEVELOPMENT: Use "localhost" or "127.0.0.1"
+# For PRODUCTION/DOCKER: Use "0.0.0.0" to accept connections from all interfaces
+address = "localhost"
+
+enableCORS = false
+enableXsrfProtection = true
+
+# File watcher type (for development)
+fileWatcherType = "auto"
+
+# Max upload size in MB
+maxUploadSize = 200
+
+# Max message size in MB
+maxMessageSize = 200
+
+# Enable websocket compression
+enableWebsocketCompression = true
+
+[browser]
+# Browser settings
+gatherUsageStats = false
+
+# NOTE: serverAddress and serverPort are deprecated in [browser] section
+# Use server.address and server.port in [server] section instead
+
+[runner]
+# Runner settings
+magicEnabled = true
+fastReruns = true
+
+[client]
+# Client settings
+showErrorDetails = true
+toolbarMode = "minimal"
+
+[logger]
+# Logging level: "error", "warning", "info", "debug"
+level = "info"
+
+# Message format
+messageFormat = "%(asctime)s %(message)s"
+
+[deprecation]
+# Show deprecation warnings
+showPyplotGlobalUse = false

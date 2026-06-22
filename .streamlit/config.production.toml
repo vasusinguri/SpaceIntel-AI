@@ -1,0 +1,68 @@
+# SpaceIntel AI - Streamlit Production Configuration
+# This file is for PRODUCTION/DOCKER deployments
+# Copy this to config.toml when deploying to production environments
+
+[theme]
+# Primary color for interactive elements (Space Blue)
+primaryColor = "#00bfff"
+
+# Background color (Dark Space Theme)
+backgroundColor = "#0e1117"
+
+# Secondary background color for cards and containers
+secondaryBackgroundColor = "#1a1c23"
+
+# Text color (White for readability)
+textColor = "#ffffff"
+
+# Font family
+font = "sans serif"
+
+[server]
+# Server settings for PRODUCTION
+headless = true  # Run without browser (required for server deployments)
+port = 8501
+
+# PRODUCTION: Use 0.0.0.0 to accept connections from all network interfaces
+# This is required for Docker, cloud deployments, and remote access
+address = "0.0.0.0"
+
+enableCORS = false
+enableXsrfProtection = true
+
+# File watcher type (for development)
+fileWatcherType = "auto"
+
+# Max upload size in MB
+maxUploadSize = 200
+
+# Max message size in MB
+maxMessageSize = 200
+
+# Enable websocket compression
+enableWebsocketCompression = true
+
+[browser]
+# Browser settings
+gatherUsageStats = false
+
+[runner]
+# Runner settings
+magicEnabled = true
+fastReruns = true
+
+[client]
+# Client settings
+showErrorDetails = false  # Hide error details in production
+toolbarMode = "minimal"
+
+[logger]
+# Logging level: "error", "warning", "info", "debug"
+level = "info"
+
+# Message format
+messageFormat = "%(asctime)s %(message)s"
+
+[deprecation]
+# Show deprecation warnings
+showPyplotGlobalUse = false

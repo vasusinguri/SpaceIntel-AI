@@ -1,0 +1,6 @@
+streamlit
+feedparser
+google-genai
+python-dotenv
+pydantic
+beautifulsoup4
